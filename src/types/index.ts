@@ -1,5 +1,5 @@
 export * from './config'
 
 export interface Loader {
-  load(paths: string[] | undefined): object | null
+  load(raw: string | undefined): object | null
 }
