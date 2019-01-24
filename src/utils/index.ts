@@ -17,4 +17,5 @@ export const absPathify = (p: string): string => {
   return resolve(pp)
 }
 
-export const readFile = (p: string, encode: string = 'utf8') => readFileSync(p, encode)
+export const readFile = (p: string, encode: string = 'utf8') =>
+  readFileSync(p, encode)

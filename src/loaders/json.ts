@@ -1,10 +1,10 @@
 import { existsSync } from 'fs'
-import { Loader } from "../types"
+import { Loader } from '../types'
 import { readFile } from '../utils'
 
 export class JsonLoader implements Loader {
   public load(paths: string[] | undefined): object | null {
-    const files = paths.map(p => existsSync(p) ? p : null).filter(Boolean)
+    const files = paths.map(p => (existsSync(p) ? p : null)).filter(Boolean)
     if (files.length < 1) {
       return null
     }
