@@ -32,11 +32,11 @@ interface RootConfig {
 
 #### `RootConfig.configName`
 
-config file name without extension, eg: 'config', '.env'
+config file name without extension, eg: `config`, `.env`
 
 #### `RootConfig.configPaths`
 
-- config file load paths, eg: ['.']
+- config file load paths, eg: `['.']`
 
 - if start with `$` will be replaced by env, eg: `$HOME/test` will be `~/test`
 
