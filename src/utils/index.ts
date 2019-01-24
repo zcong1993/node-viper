@@ -1,4 +1,5 @@
 import { resolve, sep } from 'path'
+import { readFileSync } from 'fs'
 import { homedir } from 'os'
 
 export const absPathify = (p: string): string => {
@@ -15,3 +16,5 @@ export const absPathify = (p: string): string => {
 
   return resolve(pp)
 }
+
+export const readFile = (p: string, encode: string = 'utf8') => readFileSync(p, encode)
