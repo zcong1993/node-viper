@@ -1,4 +1,4 @@
-export type supportTypes = 'json' | 'yaml' | 'toml' | 'env'
+export type supportTypes = 'json' | 'yaml' | 'toml' | 'dotenv'
 
 export interface RootConfig {
   configName?: string
