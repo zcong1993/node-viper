@@ -1,7 +1,7 @@
 import { join } from 'path'
-import { existsSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { RootConfig, supportTypes, Loader } from './types'
-import { normalizeConfig, absPathify, getExt, readFile } from './utils'
+import { normalizeConfig, absPathify, getExt } from './utils'
 import {
   DotEnvLoader,
   JsonLoader,
@@ -12,6 +12,7 @@ import {
 
 type LoaderMap = { [key in supportTypes]: Loader }
 
+const readFile = (p: string, encode: string = 'utf8') => readFileSync(p, encode)
 export class Viper {
   private config: RootConfig
   private store: object

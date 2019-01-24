@@ -1,5 +1,4 @@
 import { resolve, sep } from 'path'
-import { readFileSync } from 'fs'
 import { homedir } from 'os'
 import { RootConfig, supportTypes } from '../types'
 
@@ -20,9 +19,6 @@ export const absPathify = (p: string): string => {
   return resolve(pp)
 }
 
-export const readFile = (p: string, encode: string = 'utf8') =>
-  readFileSync(p, encode)
-
 const validateConfig = (c: RootConfig) => {
   if ((c.configName && !c.configPaths) || (!c.configName && c.configPaths)) {
     throw new Error('configName and configPaths should both set or null')
@@ -31,9 +27,6 @@ const validateConfig = (c: RootConfig) => {
 
 export const normalizeConfig = (c: RootConfig): RootConfig => {
   validateConfig(c)
-  if (!c.configName) {
-    c.configName = 'config'
-  }
   if (!c.configTypes) {
     c.configTypes = supportTps
   } else {
@@ -46,5 +39,5 @@ export const normalizeConfig = (c: RootConfig): RootConfig => {
 export const getExt = (t: supportTypes): string[] => {
   if (t === 'dotenv') return ['']
   if (t === 'yaml') return ['.yml', '.yaml']
-  return ['.' + t]
+  return [`.${t}`]
 }

@@ -5,13 +5,13 @@ export const loadEnv = (prefix: string = ''): object => {
   }
   if (!prefix) {
     return source
-  } else {
-    Object.keys(source)
-      .filter(k => k.startsWith(prefix + (prefix.endsWith('_') ? '' : '_')))
-      .forEach(k => {
-        res[k] = source[k]
-      })
   }
+
+  Object.keys(source)
+    .filter(k => k.startsWith(prefix + (prefix.endsWith('_') ? '' : '_')))
+    .forEach(k => {
+      res[k] = source[k]
+    })
   return res
 }
 
