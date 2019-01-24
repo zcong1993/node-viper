@@ -1,6 +1,6 @@
 {
   "name": "@zcong/viper",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "config loader for NodeJS",
   "main": "./dist/index.js",
   "files": [
