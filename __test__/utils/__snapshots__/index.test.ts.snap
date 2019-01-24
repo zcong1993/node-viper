@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`normalizeConfig should works well 1`] = `
+Object {
+  "configTypes": Array [
+    "json",
+    "yaml",
+    "toml",
+    "dotenv",
+  ],
+}
+`;
+
+exports[`normalizeConfig should works well 2`] = `
+Object {
+  "configName": "test",
+  "configPaths": Array [
+    ".",
+  ],
+  "configTypes": Array [
+    "json",
+    "yaml",
+    "toml",
+    "dotenv",
+  ],
+}
+`;
+
+exports[`normalizeConfig should works well 3`] = `
+Object {
+  "configTypes": Array [
+    "json",
+  ],
+}
+`;
