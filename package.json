@@ -4,8 +4,7 @@
   "description": "config loader for NodeJS",
   "main": "./dist/index.js",
   "files": [
-    "dist/**/*.js",
-    "dist/index.d.ts",
+    "dist",
     "src"
   ],
   "scripts": {
@@ -13,10 +12,10 @@
     "test": "npm run lint && npm run jest",
     "test:cov": "npm run lint && npm run jest:cov",
     "lint": "tslint -p .",
-    "format": "prettier --write **/**/*.{ts,json,md}",
+    "format": "prettier --write '**/*.{ts,json,md}'",
     "jest": "jest --detectOpenHandles --forceExit",
     "jest:cov": "jest --coverage --detectOpenHandles --forceExit",
-    "publish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "types": "./dist/index.d.ts",
   "author": "zcong1993",

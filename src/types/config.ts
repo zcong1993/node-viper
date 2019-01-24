@@ -3,6 +3,6 @@ export type supportTypes = 'json' | 'yaml' | 'toml' | 'dotenv'
 export interface RootConfig {
   configName?: string
   configPaths?: string[]
-  configType?: supportTypes[]
+  configTypes?: supportTypes[]
   envPrefix?: string
 }
