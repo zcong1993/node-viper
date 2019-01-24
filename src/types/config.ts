@@ -4,4 +4,5 @@ export interface RootConfig {
   configName?: string
   configPaths?: string[]
   configType?: supportTypes[]
+  envPrefix?: string
 }
